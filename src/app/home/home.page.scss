@@ -25,3 +25,33 @@
 #container a {
   text-decoration: none;
 }
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 2px solid white;
+}
+
+th{
+  background-color: rgb(34, 185, 185);
+}
+
+td{
+  background-color: rgb(115, 255, 208);
+}
+
+.btn{
+  --background: rgb(34, 185, 185);
+  --border-color: white;
+  --border-width: 2px;
+  --border-style: solid;
+  --color: white;
+}
+
+.short{
+  width: 200px;
+}

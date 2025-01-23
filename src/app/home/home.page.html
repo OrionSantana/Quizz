@@ -1,20 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<div style="background-color: rgb(196, 79, 250); height: 100%; overflow-y: auto; font-family: 'Courier New', Courier, monospace;">
+  <h3 style="text-align: center;"><b>Agenda de eventos</b></h3><br>
+  <ion-input [formControl]="name" label="Nombre del Evento: "></ion-input><br>
+  <ion-input [formControl]="dateS" type="datetime-local" label="Fecha de Inicio del Evento: " class="short"></ion-input><br>
+  <ion-input [formControl]="dateE" type="datetime-local" label="Fecha de Fin del Evento: " class="short"></ion-input><br>
+  <ion-input [formControl]="location" label="Ubicación del Evento: "></ion-input><br>
+  <ion-input [formControl]="nameE" label="Nombre del Encargado: "></ion-input><br>
+  <ion-input [formControl]="phoneE" type="number" label="Telefono del Encargado: " placeholder="Máximo 10 digitos"></ion-input><br><br> 
+  <div style="text-align: center;">
+  <ion-button class="btn" (click)="cEvento()">Crear evento</ion-button><br><br>
+</div>
+  <table>
+    <tr>
+      <!-- <th>ID</th> -->
+      <th>Nombre del Evento</th>
+      <th>Fecha de Inicio del Evento</th>
+      <th>Fecha de Fin del Evento</th>
+      <th>Ubicación del Evento</th>
+      <th>Confirmar</th>
+      <th>Nombre del Encargado</th>
+      <th>Telefono del Encargado</th>
+      <!-- <th>Confirm Value</th> -->
+    </tr>
+    <tbody>
+      <tr *ngFor="let event of eventos">
+        <!-- <td>{{event.id}}</td> -->
+        <td>{{event.name}}</td>
+        <td>{{event.dateS}}</td>
+        <td>{{event.dateE}}</td>
+        <td>{{event.location}}</td>
+        <td>
+          <ion-checkbox (click)="Confirm(event.id)"></ion-checkbox>
+        </td>
+        <td>{{event.nameE}}</td>
+        <td>{{event.phoneE}}</td>
+        <!-- <td>{{event.confirm}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
