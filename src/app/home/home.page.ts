@@ -32,6 +32,12 @@ export class HomePage {
         nameE: this.nameE.value!,
         phoneE: this.phoneE.value!
       });
+      this.name.setValue('');
+      this.dateS.setValue('');
+      this.dateE.setValue('');
+      this.location.setValue('');
+      this.nameE.setValue('');
+      this.phoneE.setValue('');
     }else{
       alert('Inserte un valor valido en cada espacio');
     }

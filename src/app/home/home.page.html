@@ -5,7 +5,7 @@
   <ion-input [formControl]="dateE" type="datetime-local" label="Fecha de Fin del Evento: " class="short"></ion-input><br>
   <ion-input [formControl]="location" label="Ubicación del Evento: "></ion-input><br>
   <ion-input [formControl]="nameE" label="Nombre del Encargado: "></ion-input><br>
-  <ion-input [formControl]="phoneE" type="number" label="Telefono del Encargado: " placeholder="Máximo 10 digitos"></ion-input><br><br> 
+  <ion-input [formControl]="phoneE" type="number" label="Telefono del Encargado: " required></ion-input><br><br> 
   <div style="text-align: center;">
   <ion-button class="btn" (click)="cEvento()">Crear evento</ion-button><br><br>
 </div>
